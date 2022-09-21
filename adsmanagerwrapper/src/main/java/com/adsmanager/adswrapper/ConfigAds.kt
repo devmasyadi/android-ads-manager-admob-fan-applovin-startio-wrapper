@@ -1,7 +1,6 @@
 package com.adsmanager.adswrapper
 
 import com.adsmanager.ads.NetworkAds
-import com.adsmanager.ads.NetworkOpenAd
 
 object ConfigAds {
 
@@ -14,13 +13,10 @@ object ConfigAds {
 
     var intervalTimeInterstitial = 10 // seconds
 
-    var primaryNetworkOpenAd = NetworkOpenAd.ADMOB
-    var secondaryNetworkOpenAd: NetworkOpenAd? = null
-    var tertiaryAdsNetworkOpenAd: NetworkOpenAd? = null
-
     var primaryOpenAdId = ""
-    var secondaryOpenAdId: String? = null
-    var tertiaryOpenAdId: String? = null
+    var secondaryOpenAdId = ""
+    var tertiaryOpenAdId = ""
+    var quaternaryOpenAdId = ""
 
     var primaryAds: NetworkAds = NetworkAds.ADMOB
     var secondaryAds: NetworkAds? = null

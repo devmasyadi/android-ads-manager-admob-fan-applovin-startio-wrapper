@@ -19,7 +19,7 @@ class AdsManagerOpenAdWrapper(
     fun getCurrentActivity() = currentActivity
 
     fun isShowingAd(): Boolean {
-        return adsManagerOpenAd.isShowingAd(ConfigAds.primaryNetworkOpenAd)
+        return adsManagerOpenAd.isShowingAd()
     }
 
     fun loadAd(
@@ -29,12 +29,14 @@ class AdsManagerOpenAdWrapper(
         if (ConfigAds.isShowAds && ConfigAds.isShowOpenAd)
             adsManagerOpenAd.loadAd(
                 activity,
-                ConfigAds.primaryNetworkOpenAd,
+                ConfigAds.primaryAds,
                 ConfigAds.primaryOpenAdId,
-                ConfigAds.secondaryNetworkOpenAd,
+                ConfigAds.secondaryAds,
                 ConfigAds.secondaryOpenAdId,
-                ConfigAds.tertiaryAdsNetworkOpenAd,
+                ConfigAds.tertiaryAds,
                 ConfigAds.tertiaryOpenAdId,
+                ConfigAds.quaternaryAds,
+                ConfigAds.quaternaryOpenAdId,
                 callbackAds
             )
     }
@@ -46,12 +48,14 @@ class AdsManagerOpenAdWrapper(
         if (ConfigAds.isShowAds && ConfigAds.isShowOpenAd)
             adsManagerOpenAd.showAdIfAvailable(
                 activity,
-                ConfigAds.primaryNetworkOpenAd,
+                ConfigAds.primaryAds,
                 ConfigAds.primaryOpenAdId,
-                ConfigAds.secondaryNetworkOpenAd,
+                ConfigAds.secondaryAds,
                 ConfigAds.secondaryOpenAdId,
-                ConfigAds.tertiaryAdsNetworkOpenAd,
+                ConfigAds.tertiaryAds,
                 ConfigAds.tertiaryOpenAdId,
+                ConfigAds.quaternaryAds,
+                ConfigAds.quaternaryOpenAdId,
                 callbackOpenAd
             )
     }
