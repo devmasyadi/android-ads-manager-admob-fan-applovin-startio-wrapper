@@ -26,7 +26,7 @@ class AdsManagerOpenAdWrapper(
         activity: Activity,
         callbackAds: CallbackAds?
     ) {
-        if (ConfigAds.isShowAds)
+        if (ConfigAds.isShowAds && ConfigAds.isShowOpenAd)
             adsManagerOpenAd.loadAd(
                 activity,
                 ConfigAds.primaryNetworkOpenAd,
@@ -43,7 +43,7 @@ class AdsManagerOpenAdWrapper(
         activity: Activity,
         callbackOpenAd: CallbackOpenAd?
     ) {
-        if (ConfigAds.isShowAds)
+        if (ConfigAds.isShowAds && ConfigAds.isShowOpenAd)
             adsManagerOpenAd.showAdIfAvailable(
                 activity,
                 ConfigAds.primaryNetworkOpenAd,

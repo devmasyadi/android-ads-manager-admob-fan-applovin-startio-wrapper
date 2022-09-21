@@ -4,14 +4,21 @@ import com.adsmanager.ads.NetworkAds
 import com.adsmanager.ads.NetworkOpenAd
 
 object ConfigAds {
+
     var isShowAds = false
+    var isShowOpenAd = false
+    var isShowBanner = false
+    var isShowInterstitial = false
+    var isShowNativeAd = false
+    var isShowRewards = false
+
     var intervalTimeInterstitial = 10 // seconds
 
     var primaryNetworkOpenAd = NetworkOpenAd.ADMOB
     var secondaryNetworkOpenAd: NetworkOpenAd? = null
     var tertiaryAdsNetworkOpenAd: NetworkOpenAd? = null
 
-    var primaryOpenAdId = "123"
+    var primaryOpenAdId = ""
     var secondaryOpenAdId: String? = null
     var tertiaryOpenAdId: String? = null
 
@@ -22,8 +29,8 @@ object ConfigAds {
 
     var primaryAppId = ""
     var secondaryAppId = ""
-    var tertiaryAppId = "208690301"
-    var quaternaryAppId = "208690301"
+    var tertiaryAppId = ""
+    var quaternaryAppId = ""
 
     var primaryBannerId = ""
     var secondaryBannerId = ""

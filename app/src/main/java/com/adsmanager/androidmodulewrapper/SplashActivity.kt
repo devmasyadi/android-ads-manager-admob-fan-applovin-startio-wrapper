@@ -42,6 +42,13 @@ class SplashActivity : AppCompatActivity() {
         ConfigAds.tertiaryAds = NetworkAds.APPLOVIN_MAX
         ConfigAds.quaternaryAds = NetworkAds.START_IO
 
+        ConfigAds.isShowAds = true
+        ConfigAds.isShowOpenAd = true
+        ConfigAds.isShowBanner = true
+        ConfigAds.isShowInterstitial = true
+        ConfigAds.isShowNativeAd = true
+        ConfigAds.isShowRewards = true
+
         ConfigAds.quaternaryAppId = "208690301"
 
         ConfigAds.primaryBannerId = "ca-app-pub-3940256099942544/6300978111XXX"
@@ -59,11 +66,10 @@ class SplashActivity : AppCompatActivity() {
         ConfigAds.primaryRewardsId = "ca-app-pub-3940256099942544/5224354917"
         ConfigAds.secondaryRewardsId = "1363711600744576_1508879032894498"
         ConfigAds.tertiaryRewardsId = "c11378688d2adfd1"
-        ConfigAds.isShowAds = true
 
         Utils.lastDate = Date()
 
-        if (!ConfigAds.isShowAds) {
+        if (!ConfigAds.isShowAds || !ConfigAds.isShowOpenAd) {
             startMainActivity()
             return
         }

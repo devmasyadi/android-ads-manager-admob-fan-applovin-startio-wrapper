@@ -59,7 +59,7 @@ class AdsManagerWrapper(
         sizeBanner: SizeBanner,
         callbackAds: CallbackAds?
     ) {
-        if (ConfigAds.isShowAds)
+        if (ConfigAds.isShowAds && ConfigAds.isShowBanner)
             adsManager.showBanner(
                 activity,
                 bannerView,
@@ -77,7 +77,7 @@ class AdsManagerWrapper(
     }
 
     override fun loadInterstitial(activity: Activity) {
-        if (ConfigAds.isShowAds)
+        if (ConfigAds.isShowAds && ConfigAds.isShowInterstitial)
             adsManager.loadInterstitial(
                 activity,
                 ConfigAds.primaryAds,
@@ -92,7 +92,7 @@ class AdsManagerWrapper(
     }
 
     override fun showInterstitial(activity: Activity, callbackAds: CallbackAds?) {
-        if (ConfigAds.isShowAds && Utils.isValidBetweenTimeInterstitial())
+        if (ConfigAds.isShowAds && ConfigAds.isShowInterstitial && Utils.isValidBetweenTimeInterstitial())
             adsManager.showInterstitial(
                 activity,
                 ConfigAds.primaryAds,
@@ -113,7 +113,7 @@ class AdsManagerWrapper(
         sizeNative: SizeNative,
         callbackAds: CallbackAds?
     ) {
-        if (ConfigAds.isShowAds)
+        if (ConfigAds.isShowAds && ConfigAds.isShowNativeAd)
             adsManager.showNativeAds(
                 activity,
                 nativeView,
@@ -131,7 +131,7 @@ class AdsManagerWrapper(
     }
 
     override fun loadRewards(activity: Activity) {
-        if (ConfigAds.isShowAds)
+        if (ConfigAds.isShowAds && ConfigAds.isShowRewards)
             adsManager.loadRewards(
                 activity,
                 ConfigAds.primaryAds,
@@ -146,7 +146,7 @@ class AdsManagerWrapper(
     }
 
     override fun showRewards(activity: Activity, callbackAds: CallbackAds?, iRewards: IRewards?) {
-        if (ConfigAds.isShowAds)
+        if (ConfigAds.isShowAds && ConfigAds.isShowRewards)
             adsManager.showRewards(
                 activity,
                 ConfigAds.primaryAds,
