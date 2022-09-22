@@ -39,6 +39,9 @@ class AdsManagerOpenAdWrapper(
                 ConfigAds.quaternaryOpenAdId,
                 callbackAds
             )
+        else {
+            callbackAds?.onAdFailedToLoad("ads off")
+        }
     }
 
     fun showAdIfAvailable(
@@ -58,6 +61,9 @@ class AdsManagerOpenAdWrapper(
                 ConfigAds.quaternaryOpenAdId,
                 callbackOpenAd
             )
+        else {
+            callbackOpenAd?.onAdFailedToLoad("ads off")
+        }
     }
 
 }

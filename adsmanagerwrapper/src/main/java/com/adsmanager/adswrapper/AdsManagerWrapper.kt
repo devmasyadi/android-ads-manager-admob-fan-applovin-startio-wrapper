@@ -74,6 +74,8 @@ class AdsManagerWrapper(
                 ConfigAds.quaternaryBannerId,
                 callbackAds
             )
+        else
+            callbackAds?.onAdFailedToLoad("ads off")
     }
 
     override fun loadInterstitial(activity: Activity) {
@@ -104,7 +106,9 @@ class AdsManagerWrapper(
                 ConfigAds.quaternaryAds,
                 ConfigAds.quaternaryInterstitialId,
                 callbackAds
-            )
+            ) else {
+                callbackAds?.onAdFailedToLoad("ads off")
+        }
     }
 
     override fun showNativeAds(
@@ -128,6 +132,9 @@ class AdsManagerWrapper(
                 ConfigAds.quaternaryNativeId,
                 callbackAds
             )
+        else {
+            callbackAds?.onAdFailedToLoad("ads off")
+        }
     }
 
     override fun loadRewards(activity: Activity) {
@@ -160,6 +167,9 @@ class AdsManagerWrapper(
                 callbackAds,
                 iRewards
             )
+        else {
+            callbackAds?.onAdFailedToLoad("ads off")
+        }
     }
 
 }
