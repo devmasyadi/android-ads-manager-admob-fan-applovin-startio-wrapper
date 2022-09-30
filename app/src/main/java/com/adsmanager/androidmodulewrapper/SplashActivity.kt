@@ -6,16 +6,14 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.adsmanager.ads.NetworkAds
 import com.adsmanager.adswrapper.AdsManagerOpenAdWrapper
 import com.adsmanager.adswrapper.AdsManagerWrapper
 import com.adsmanager.adswrapper.ConfigAds
-import com.adsmanager.adswrapper.Utils
 import com.adsmanager.core.CallbackAds
 import com.adsmanager.core.CallbackOpenAd
+import com.adsmanager.core.NetworkAds
 import com.adsmanager.core.iadsmanager.IInitialize
 import org.koin.android.ext.android.inject
-import java.util.*
 
 /**
  * Number of seconds to count down before showing the app open ad. This simulates the time needed
@@ -36,9 +34,10 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        ConfigAds.primaryOpenAdId = "ca-app-pub-3940256099942544/3419835294"
+        ConfigAds.primaryOpenAdId = "ca-app-pub-3940256099942544/3419835294XX"
+        ConfigAds.secondaryOpenAdId = "ca-app-pub-3940256099942544/3419835294"
         ConfigAds.primaryAds = NetworkAds.ADMOB
-        ConfigAds.secondaryAds = NetworkAds.FAN
+        ConfigAds.secondaryAds = NetworkAds.ADMOB
         ConfigAds.tertiaryAds = NetworkAds.APPLOVIN_MAX
         ConfigAds.quaternaryAds = NetworkAds.START_IO
 
@@ -50,13 +49,14 @@ class SplashActivity : AppCompatActivity() {
         ConfigAds.isShowRewards = true
 
         ConfigAds.quaternaryAppId = "208690301"
+        ConfigAds.intervalTimeInterstitial = 0
 
         ConfigAds.primaryBannerId = "ca-app-pub-3940256099942544/6300978111XXX"
         ConfigAds.secondaryBannerId = "1363711600744576_1363713000744436"
         ConfigAds.tertiaryBannerId = "62c9e910bbd85680"
 
-        ConfigAds.primaryInterstitialId = "ca-app-pub-3940256099942544/1033173712"
-        ConfigAds.secondaryInterstitialId = "1363711600744576_1508878896227845"
+        ConfigAds.primaryInterstitialId = "ca-app-pub-3940256099942544/1033173712XX"
+        ConfigAds.secondaryInterstitialId = "ca-app-pub-3940256099942544/1033173712"
         ConfigAds.tertiaryInterstitialId = "7263a762d1a5366b"
 
         ConfigAds.primaryNativeId = "ca-app-pub-4764558539538067/9810032480XXX"
@@ -66,8 +66,6 @@ class SplashActivity : AppCompatActivity() {
         ConfigAds.primaryRewardsId = "ca-app-pub-3940256099942544/5224354917"
         ConfigAds.secondaryRewardsId = "1363711600744576_1508879032894498"
         ConfigAds.tertiaryRewardsId = "c11378688d2adfd1"
-
-        Utils.lastDate = Date()
 
         if (!ConfigAds.isShowAds || !ConfigAds.isShowOpenAd) {
             startMainActivity()
