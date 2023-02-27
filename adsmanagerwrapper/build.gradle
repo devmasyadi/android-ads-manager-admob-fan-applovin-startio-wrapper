@@ -41,7 +41,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 
     implementation 'com.github.devmasyadi:android-ads-manager-core:1.1.0'
-    implementation 'com.github.devmasyadi:android-ads-manager-admob-fan-applovin-startio:1.0.5'
+    implementation 'com.github.devmasyadi:android-ads-manager-admob-fan-applovin-startio:+'
 
     //koin
     implementation "io.insert-koin:koin-core:2.2.3"
