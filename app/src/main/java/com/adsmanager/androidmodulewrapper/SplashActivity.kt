@@ -36,7 +36,7 @@ class SplashActivity : AppCompatActivity() {
 
         ConfigAds.primaryOpenAdId = "ca-app-pub-3940256099942544/3419835294XX"
         ConfigAds.secondaryOpenAdId = "ca-app-pub-3940256099942544/3419835294"
-        ConfigAds.primaryAds = NetworkAds.ADMOB
+        ConfigAds.primaryAds = NetworkAds.FAN
         ConfigAds.secondaryAds = NetworkAds.ADMOB
         ConfigAds.tertiaryAds = NetworkAds.APPLOVIN_MAX
         ConfigAds.quaternaryAds = NetworkAds.START_IO
@@ -51,11 +51,11 @@ class SplashActivity : AppCompatActivity() {
         ConfigAds.quaternaryAppId = "208690301"
         ConfigAds.intervalTimeInterstitial = 0
 
-        ConfigAds.primaryBannerId = "ca-app-pub-3940256099942544/6300978111XXX"
+        ConfigAds.primaryBannerId = "1363711600744576_1363713000744436"
         ConfigAds.secondaryBannerId = "1363711600744576_1363713000744436"
         ConfigAds.tertiaryBannerId = "62c9e910bbd85680"
 
-        ConfigAds.primaryInterstitialId = "ca-app-pub-3940256099942544/1033173712XX"
+        ConfigAds.primaryInterstitialId = "1363711600744576_1508878896227845"
         ConfigAds.secondaryInterstitialId = "ca-app-pub-3940256099942544/1033173712"
         ConfigAds.tertiaryInterstitialId = "7263a762d1a5366b"
 
@@ -80,7 +80,7 @@ class SplashActivity : AppCompatActivity() {
         )
         adsManager.setTestDevices(
             this,
-            listOf("7822dbbe-788d-4083-afd2-37e9b9a74301"),
+            listOf("4c70f04c-e18f-4a36-9ab0-dccc0682b672"),
         )
         adsManagerOpenAd.loadAd(
             this,
